@@ -3,5 +3,6 @@ description: "Testing actions with annotations"
 runs:
   using: docker
   image: Dockerfile
-  entrypoint: "/action/entrypoint.sh"
-  # post-entrypoint: "/entrypoint.sh"
+  # pre-entrypoint: "entrypoint.sh"
+  # entrypoint: "entrypoint.sh"
+  # post-entrypoint: "entrypoint.sh"
