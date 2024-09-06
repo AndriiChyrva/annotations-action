@@ -16,4 +16,4 @@ ADD /action /action
 RUN chmod +rwx /action
 RUN chmod +rwx /action/index.js
 RUN ls -la 
-RUN ls -la ~/action
+RUN ls -la /action
