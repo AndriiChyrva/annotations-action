@@ -1,6 +1,6 @@
 const core = require('@actions/core')
 const command = require('@actions/core/lib/command')
-// import * as coreCommand from '@actions/core/lib/command'
+const path = require('path')
 
 /**
  * The main function for the action.

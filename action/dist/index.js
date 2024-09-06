@@ -24934,7 +24934,7 @@ exports["default"] = _default;
 
 const core = __nccwpck_require__(2186)
 const command = __nccwpck_require__(7351)
-// import * as coreCommand from '@actions/core/lib/command'
+const path = __nccwpck_require__(1017)
 
 /**
  * The main function for the action.
