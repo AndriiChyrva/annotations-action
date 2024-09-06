@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
 echo "Exec 'entrypoint.sh'"
-node ./action/index.js
+node /usr/src/action/index.js
 
-exit 0
+# exit 0
