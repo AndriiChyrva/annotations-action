@@ -1,14 +1,8 @@
 FROM node:latest
 
-# Debug
-RUN pwd 
-
 # 1. Set the working directory inside the container
 WORKDIR /usr/src
 RUN ls -la
-
-# Debug
-RUN pwd 
 
 # 2. Copy source file(s) required for the action
 COPY entrypoint.sh .
