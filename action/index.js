@@ -4,6 +4,7 @@ import * as command from '@actions/core/lib/command'
 
 (() => {
     try {
+        console.log('Exec index.js');
         // command.issueCommand('add-matcher', {}, path.join(__dirname, 'problem-matcher.json'));
         command.issueCommand('debug', {}, 'Test Debug');
     } catch (error) {
