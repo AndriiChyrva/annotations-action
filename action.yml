@@ -1,5 +1,5 @@
 name: "Annotations_Test"
-description: "Testing actions with annotations"
+description: "Testing 'Github Docker Actions' with annotations"
 runs:
   using: docker
   image: Dockerfile

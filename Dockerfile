@@ -1,28 +1,20 @@
 FROM node:latest
 
-# 1. ADD 'entrypoint.sh' script to the Docker container
-# 2. Change mode to the executable for 'entrypoint.sh'
-# 3. List the directory
-# ADD entrypoint.sh /entrypoint.sh
-COPY entrypoint.sh /
-RUN chmod +rwx entrypoint.sh
-RUN ls -la
-RUN cat /entrypoint.sh
-
-# 1. ADD 'action' directory to the Docker container
-# 2. Change mode to the executable for 'action' directory
-# 3. Change mode to the executable for 'index.js' file
-# 4. List the directory
-# 5. List the 'action' directory
-# ADD /action /action
-COPY /action /action
-RUN chmod +rwx /action
-RUN chmod +rwx /action/index.js
-RUN ls -la /action
-
-RUN cat /action/index.js
-
+# Debug
 RUN pwd
 
-# 1. RUN 'entrypoint.sh' script
-ENTRYPOINT ["/entrypoint.sh"]
+# 1. Set the working directory inside the container
+WORKDIR /usr/src
+RUN LS -LA  /usr/src
+
+# 2. Copy source file(s) required for the action
+COPY entrypoint.sh .
+COPY /action       ./action
+
+# 3. Change permissions to source file(s)
+RUN chmod +rwx entrypoint.sh
+RUN chmod +rwx /action
+RUN chmod +rwx /action/index.js
+
+# 4. Configure the container to be run as an executable
+ENTRYPOINT ["/usr/src/entrypoint.sh"]

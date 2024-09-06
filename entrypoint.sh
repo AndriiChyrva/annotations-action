@@ -1,8 +1,6 @@
-#!bin/sh
+#!/bin/sh -l
 
-# set -x
-# set -o errexit
-# printenv -O
-
-echo "Exec entrypoint.sh"
+echo "Exec 'entrypoint.sh'"
 node /action/index.js
+
+exit 0
