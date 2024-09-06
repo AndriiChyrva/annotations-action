@@ -14,7 +14,7 @@ async function run() {
     command.issueCommand('debug', {}, 'Some Debug message here')
 
     console.log('Add-Matcher')
-    coreCommand.issueCommand(
+    command.issueCommand(
       'add-matcher',
       {},
       path.join(__dirname, 'problem-matcher.json')
