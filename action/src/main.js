@@ -8,14 +8,17 @@ const command = require('@actions/core/lib/command')
  */
 async function run() {
   try {
+    console.log('Bankai!!!')
+
+    console.log('Debug')
     command.issueCommand('debug', {}, 'Some Debug message here')
 
-    // Example
-    // coreCommand.issueCommand(
-    //   'add-matcher',
-    //   {},
-    //   path.join(__dirname, 'problem-matcher.json')
-    // )
+    console.log('Add-Matcher')
+    coreCommand.issueCommand(
+      'add-matcher',
+      {},
+      path.join(__dirname, 'problem-matcher.json')
+    )
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)
