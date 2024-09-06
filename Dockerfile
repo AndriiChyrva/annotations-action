@@ -5,7 +5,7 @@ RUN pwd
 
 # 1. Set the working directory inside the container
 WORKDIR /usr/src
-RUN LS -LA  /usr/src
+RUN ls -la /usr/src
 
 # 2. Copy source file(s) required for the action
 COPY entrypoint.sh .
