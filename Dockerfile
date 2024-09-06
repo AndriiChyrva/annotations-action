@@ -1,10 +1,11 @@
 FROM node:latest
 
-ADD /entrypoint.sh ${GITHUB_ACTION_PATH}/entrypoint.sh
-RUN chmod +rwx ${GITHUB_ACTION_PATH}/entrypoint.sh
+ADD /entrypoint.sh /entrypoint.sh
+RUN chmod +rwx /entrypoint.sh
 
-ADD /action ${GITHUB_ACTION_PATH}
-RUN chmod +rwx ${GITHUB_ACTION_PATH}/index.js
+ADD /action /action
+RUN chmod +rwx /action
+RUN chmod +rwx /action/index.js
 
-RUN echo ${GITHUB_ACTION_PATH}
-RUN ls -la ${GITHUB_ACTION_PATH}
+RUN ls -la ~
+RUN ls -la /action
