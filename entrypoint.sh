@@ -4,4 +4,4 @@ set -x
 set -o errexit
 printenv -O
 
-node ~/action/index.js
+node /action/index.js
