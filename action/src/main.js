@@ -1,4 +1,5 @@
 const core = require('@actions/core')
+import * as coreCommand from '@actions/core/lib/command'
 
 /**
  * The main function for the action.
@@ -6,7 +7,7 @@ const core = require('@actions/core')
  */
 async function run() {
   try {
-    core.issueCommand('debug', {}, 'Some Debug message here')
+    coreCommand.issueCommand('debug', {}, 'Some Debug message here')
 
     // Example
     // coreCommand.issueCommand(
