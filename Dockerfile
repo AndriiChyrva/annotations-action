@@ -1,11 +1,14 @@
 FROM node:latest
 
 # Debug
-RUN pwd
+RUN pwd 
 
 # 1. Set the working directory inside the container
 WORKDIR /usr/src
-RUN ls -la /usr/src
+RUN ls -la
+
+# Debug
+RUN pwd 
 
 # 2. Copy source file(s) required for the action
 COPY entrypoint.sh .
@@ -13,8 +16,8 @@ COPY /action       ./action
 
 # 3. Change permissions to source file(s)
 RUN chmod +rwx entrypoint.sh
-RUN chmod +rwx /action
-RUN chmod +rwx /action/index.js
+RUN chmod +rwx ./action
+RUN chmod +rwx ./action/index.js
 
 # 4. Configure the container to be run as an executable
 ENTRYPOINT ["/usr/src/entrypoint.sh"]
