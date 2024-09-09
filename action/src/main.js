@@ -11,14 +11,18 @@ async function run() {
     console.log('Bankai!!!')
 
     console.log('Debug')
-    command.issueCommand('debug', {}, 'Some Debug message here')
+    command.issueCommand('debug', { message: 'Some Debug message here' }, 'Some Debug message here')
 
-    console.log('Add-Matcher')
-    command.issueCommand(
-      'add-matcher',
-      {},
-      path.join(__dirname, 'problem-matcher.json')
-    )
+    console.log('Notice')
+    command.issueCommand('notice ', { message: 'Some Notice message here' }, 'Some Notice message here')
+
+
+    // console.log('Add-Matcher')
+    // command.issueCommand(
+    //   'add-matcher',
+    //   {},
+    //   path.join(__dirname, 'problem-matcher.json')
+    // )
   } catch (error) {
     // Fail the workflow run if an error occurs
     core.setFailed(error.message)
