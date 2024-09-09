@@ -19,7 +19,6 @@ async function run() {
     // core.setCommandEcho	   echo
     // core.setSecret	         add-mask
 
-
     // console.log('Debug')
     command.issueCommand(
       'debug',
@@ -69,7 +68,7 @@ async function run() {
       { name: 'Some Group name here' },
       'Some Group name here'
     )
-    console.log("Inside the Group")
+    console.log('Inside the Group')
 
     // console.log('Endgroup')
     command.issueCommand(
@@ -83,7 +82,6 @@ async function run() {
       { secret: 'Some Secret is here' },
       'Some Secret is here'
     )
-
 
     // console.log('Add-Matcher')
     // command.issueCommand(
