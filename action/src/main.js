@@ -49,8 +49,8 @@ async function run() {
     )
 
     // console.log('Echo')
-    command.issueCommand('echo', { enabled: 'on' }, 'Some Echo message here')
-    command.issueCommand('echo', { enabled: 'off' }, 'Some Echo message here')
+    command.issueCommand('echo', { enabled: 'on' }, 'on')
+    command.issueCommand('echo', { enabled: 'off' }, 'off')
     command.issueCommand(
       'setCommandEcho',
       { enabled: true },
