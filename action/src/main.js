@@ -14,11 +14,11 @@ async function run() {
     // core.notice	           notice
     // core.warning	           warning
     // core.error	             error
-
+    // core.startGroup	       group
     // core.endGroup	         endgroup
     // core.setCommandEcho	   echo
     // core.setSecret	         add-mask
-    // core.startGroup	       group
+
 
     // console.log('Debug')
     command.issueCommand(
@@ -49,8 +49,9 @@ async function run() {
     )
 
     // console.log('Echo')
-    command.issueCommand('echo', { enabled: 'on' }, 'on')
-    command.issueCommand('echo', { enabled: 'off' }, 'off')
+    command.issueCommand('echo', { enabled: true }, 'on')
+    command.issueCommand('echo', { enabled: false }, 'off')
+
     command.issueCommand(
       'setCommandEcho',
       { enabled: true },
@@ -68,6 +69,7 @@ async function run() {
       { name: 'Some Group name here' },
       'Some Group name here'
     )
+    console.log("Inside the Group")
 
     // console.log('Endgroup')
     command.issueCommand(
@@ -75,6 +77,13 @@ async function run() {
       { name: 'Some Endgroup name' },
       'Some EndGroup name here'
     )
+
+    command.issueCommand(
+      'add-mask',
+      { secret: 'Some Secret is here' },
+      'Some Secret is here'
+    )
+
 
     // console.log('Add-Matcher')
     // command.issueCommand(
