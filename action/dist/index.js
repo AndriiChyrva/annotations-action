@@ -25011,10 +25011,18 @@ async function run() {
       'Some EndGroup name here'
     )
 
+    // console.log('add-mask')
     command.issueCommand(
       'add-mask',
       { secret: 'Some Secret is here' },
       'Some Secret is here'
+    )
+
+    // console.log('set-output')
+    command.issueCommand(
+      'setOutput',
+      { name: 'name', value: 'value' },
+      'setOutput'
     )
 
     // console.log('Add-Matcher')
