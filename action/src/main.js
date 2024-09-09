@@ -10,25 +10,59 @@ async function run() {
   try {
     console.log('Bankai!!!')
 
-    console.log('Debug')
+    // core.debug	             debug
+    // core.notice	           notice
+    // core.warning	           warning
+    // core.error	             error
+
+    // core.endGroup	         endgroup
+    // core.setCommandEcho	   echo
+    // core.setSecret	         add-mask
+    // core.startGroup	       group
+
+    // console.log('Debug')
     command.issueCommand(
       'debug',
       { message: 'Some Debug message here' },
       'Some Debug message here'
     )
 
-    console.log('Notice')
+    // console.log('Notice')
     command.issueCommand(
       'notice',
       { message: 'Some Notice message here' },
       'Some Notice message here'
     )
 
-    console.log('Warning')
+    // console.log('Warning')
     command.issueCommand(
       'warning',
       { message: 'Some Warning message here' },
       'Some Warning message here'
+    )
+
+    // console.log('Error')
+    command.issueCommand(
+      'error',
+      { message: 'Some Error message here' },
+      'Some Error message here'
+    )
+
+    // console.log('Echo')
+    command.issueCommand('echo', { enabled: true }, 'Some Echo message here')
+
+    // console.log('Group')
+    command.issueCommand(
+      'group',
+      { name: 'Some Group name here' },
+      'Some Group name here'
+    )
+
+    // console.log('Endgroup')
+    command.issueCommand(
+      'endgroup',
+      { name: 'Some Endgroup name' },
+      'Some EndGroup name here'
     )
 
     // console.log('Add-Matcher')
