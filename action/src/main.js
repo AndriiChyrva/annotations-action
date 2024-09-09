@@ -11,14 +11,25 @@ async function run() {
     console.log('Bankai!!!')
 
     console.log('Debug')
-    command.issueCommand('debug', { message: 'Some Debug message here' }, 'Some Debug message here')
+    command.issueCommand(
+      'debug',
+      { message: 'Some Debug message here' },
+      'Some Debug message here'
+    )
 
     console.log('Notice')
-    command.issueCommand('notice', { message: 'Some Notice message here' }, 'Some Notice message here')
+    command.issueCommand(
+      'notice',
+      { message: 'Some Notice message here' },
+      'Some Notice message here'
+    )
 
     console.log('Warning')
-    command.issueCommand('warning', { message: 'Some Warning message here' }, 'Some Warning message here')
-
+    command.issueCommand(
+      'warning',
+      { message: 'Some Warning message here' },
+      'Some Warning message here'
+    )
 
     // console.log('Add-Matcher')
     // command.issueCommand(
