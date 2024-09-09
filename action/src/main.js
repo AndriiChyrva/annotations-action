@@ -49,7 +49,10 @@ async function run() {
     )
 
     // console.log('Echo')
-    command.issueCommand('echo', { enabled: true }, 'Some Echo message here')
+    command.issueCommand('echo', { enabled: 'on' }, 'Some Echo message here')
+    command.issueCommand('echo', { enabled: 'off' }, 'Some Echo message here')
+    command.issueCommand('setCommandEcho', { enabled: true }, 'Some Echo message here')
+    command.issueCommand('setCommandEcho', { enabled: false }, 'Some Echo message here')
 
     // console.log('Group')
     command.issueCommand(
